@@ -1,0 +1,35 @@
+<!Doctype html>
+<html>
+	 <head>
+		<title>Чанбин</title>
+		<meta charset="utf-8">
+		 <script >
+			 let i=0;
+			 let maxi=52;
+			 function slideShow(){
+			 if(++i>maxi) i=0;
+			 document.getElementById("recl").src="img"+i+".jpg";
+			 setTimeout("slideShow()", 1000);
+			 }
+		 </script>
+		 <style>
+			p {text-align:center; vertical-align: center}
+			body {background-color: #FFB6C1; font: bold 28pt Brush Script MT}
+			@media all and (max-width: 700px) {
+			 body {
+			 font:12pt
+			 }
+			 img {width="100"}
+			}
+		 </style>
+		 <bgsound src="Audio.mp3"> 
+	 </head>
+		<audio controls>
+			<source src="Audio.mp3" type="audio/mpeg">
+		</audio>
+		 <body onLoad="slideShow()">
+		 <p style= "color: #C71585">Заберите Чанбина в добрые руки<img src ="heart.webp" width="50"></p>
+		 <p><img id="recl" src="img0.jpg" width="400"></p>
+		
+	 </body>
+</html>
